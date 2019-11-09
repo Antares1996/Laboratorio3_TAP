@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EO.Pdf" Version="19.2.91" />
     <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmailSenderImplementation1\EmailSenderImplementation1.csproj" />
+    <ProjectReference Include="..\EmailSenderInterfaces\EmailSenderInterfaces.csproj" />
   </ItemGroup>
 
 </Project>

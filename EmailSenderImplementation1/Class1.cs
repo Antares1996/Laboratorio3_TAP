@@ -1,4 +1,5 @@
 ﻿using EmailSenderInterfaces;
+using Ninject.Modules;
 using System;
 
 namespace EmailSenderImplementation1
@@ -9,6 +10,14 @@ namespace EmailSenderImplementation1
         {
             Console.WriteLine("emailsender1: " + to + " -> " + body);
             return true;
+        }
+    }
+
+    public class EmailSenderModule1 : NinjectModule
+    {
+        public override void Load()
+        {
+            this.Bind<IEmailSender>().To<EmailSender1>();
         }
     }
 }
